@@ -35,10 +35,10 @@ def sanitize_filename(filename):
     by a dash (-) to make the image unique for round-tripping. In an effort to
     prevent a bunch of timestamps preceding the image name (in the event a
     document is round-tripped several times), strip off the timestamp
-    and dash. When images come from docx they are always `image\d+`. We only
+    and dash. When images come from docx they are always `imageN`. We only
     want to strip off the timestamp and dash if they were programmatically
     added.
-    """  # noqa
+    """
 
     # (timestamp)-image(image_number).(file_extension)
     regex = re.compile(r'\d{10}-image\d+\.\w{3,4}')
