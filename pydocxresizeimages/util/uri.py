@@ -38,7 +38,7 @@ def sanitize_filename(filename):
     and dash. When images come from docx they are always `image\d+`. We only
     want to strip off the timestamp and dash if they were programmatically
     added.
-    """ # noqa
+    """  # noqa
 
     # (timestamp)-image(image_number).(file_extension)
     regex = re.compile(r'\d{10}-image\d+\.\w{3,4}')
