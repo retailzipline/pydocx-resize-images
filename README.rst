@@ -8,7 +8,7 @@ An mixin for PyDocX that resize all the images when converting from .docx to .ht
 Requirements
 ============
 
-* Python 2.7
+* Python 3.9.18
 * Works on Linux, Windows, Mac OSX, BSD
 
 Install
@@ -53,14 +53,13 @@ python runtimes:
 
 .. code-block:: console
 
-    pyenv install 2.7.16
-    pyenv install 3.8.5
+    pyenv install 3.9.18
 
 install and run tox:
 
 .. code-block:: console
 
-    pyenv local 3.8.5
+    pyenv local 3.9.18
     pip install tox tox-pyenv
     tox
 
