@@ -35,10 +35,10 @@ def sanitize_filename(filename):
     by a dash (-) to make the image unique for round-tripping. In an effort to
     prevent a bunch of timestamps preceding the image name (in the event a
     document is round-tripped several times), strip off the timestamp
-    and dash. When images come from docx they are always `image\d+`. We only
+    and dash. When images come from docx they are always `imageN`. We only
     want to strip off the timestamp and dash if they were programmatically
     added.
-    """ # noqa
+    """
 
     # (timestamp)-image(image_number).(file_extension)
     regex = re.compile(r'\d{10}-image\d+\.\w{3,4}')
@@ -78,7 +78,7 @@ def uri_is_external(uri):
 
 def uri_is_self_hosted(uri, bucket_name=''):
     """
-    >>> uri_is_self_hosted('https://cdn-retailzipline-dev.s3.amazonaws.com/o/zipline/communications/0624df82-6090-4b32-8e57-6a4a96d57ae9/168814738383343-image1.png')
+    >>> uri_is_self_hosted('https://cdn-dev.s3.amazonaws.com/o/zipline/communications/1.png', 'cdn-dev')
     True
     >>> uri_is_self_hosted('http://google/images/image.png')
     False
