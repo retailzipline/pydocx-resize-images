@@ -8,7 +8,7 @@ import re
 import os
 import posixpath
 
-from six.moves.urllib.parse import unquote
+from urllib.parse import unquote
 
 regexp_pattern = r'data:image/(?P<extension>\w+);base64,(?P<image_data>.+)'
 

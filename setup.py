@@ -1,17 +1,11 @@
-#! /usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os
 import codecs
+import os
 import re
 
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    from ez_setup import use_setuptools
-
-    use_setuptools()
-    from setuptools import setup, find_packages  # noqa
+from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -44,20 +38,20 @@ def main():
         url="https://github.com/jhubert/pydocx-resize-images",
         platforms=["any"],
         license="BSD",
+        python_requires=">=3.12",
         packages=find_packages(),
         scripts=[],
         zip_safe=False,
         install_requires=[
             'requests>=2.31.0',
-            'Pillow==10.2.0',
-            'six>=1.16.0'
+            'Pillow==10.2.0'
         ],
         cmdclass={},
         classifiers=[
             # "Development Status :: 1 - Alpha",
             "Programming Language :: Python",
             "Programming Language :: Python :: 3",
-            "Programming Language :: Python :: 3.9",
+            "Programming Language :: Python :: 3.12",
             "Programming Language :: Python :: Implementation :: PyPy",
             "Intended Audience :: Developers",
             "License :: OSI Approved :: BSD License",

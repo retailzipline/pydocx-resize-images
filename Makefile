@@ -26,7 +26,9 @@ lint:
 	flake8 --max-line-length=100 pydocxresizeimages tests
 
 test:
-	nosetests --verbose --with-doctest --with-coverage --cover-package pydocxresizeimages
+	coverage erase
+	coverage run --source=pydocxresizeimages -m unittest discover --verbose
+	coverage report
 
 test-all:
 	tox
