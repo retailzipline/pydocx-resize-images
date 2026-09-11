@@ -70,7 +70,7 @@ class ImageResizerTestCase(TestCase):
     def test_invalid_dimention_error(self):
         image_data = get_fixture('image1.png', as_binary=True)
 
-        with self.assertRaisesRegexp(ValueError, 'invalid literal for int()'):
+        with self.assertRaisesRegex(ValueError, 'invalid literal for int()'):
             ImageResizer(image_data, 'image1.png', '0a px', '10b px')
 
     def test_init_image(self):
@@ -233,5 +233,5 @@ class ImageResizerTestCase(TestCase):
             on_save_exception=IOError("Invalid image to save")
         )
 
-        with self.assertRaisesRegexp(IOError, "Invalid image to save"):
+        with self.assertRaisesRegex(IOError, "Invalid image to save"):
             ir.resize_image()

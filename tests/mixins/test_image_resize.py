@@ -48,6 +48,7 @@ class ResizedImagesExportMixinTestCase(TestCase):
         result = resizer.get_image_tag(img_obj)
         self.assertEqual(result, '')
 
+    @responses.activate
     def test_get_image_tag_has_skippable_extension(self):
         uri = 'http://httpbin.org/image/image1.svg'
         mock_request(uri, fixture='image1.png')
