@@ -43,8 +43,8 @@ def main():
         scripts=[],
         zip_safe=False,
         install_requires=[
-            'requests>=2.31.0',
-            'Pillow==10.2.0'
+            'requests>=2.34.2',
+            'Pillow==12.3.0'
         ],
         cmdclass={},
         classifiers=[
