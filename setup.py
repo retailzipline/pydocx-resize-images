@@ -44,7 +44,7 @@ def main():
         zip_safe=False,
         install_requires=[
             'requests>=2.34.2',
-            'Pillow==12.3.0'
+            'Pillow==13.0.0'
         ],
         cmdclass={},
         classifiers=[
